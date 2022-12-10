@@ -16,5 +16,23 @@ namespace PracticasCSharp
         {
             InitializeComponent();
         }
+        int suma(int numeroUno, int numeroDos)
+        {
+            return numeroUno + numeroDos;
+        }
+
+        void mostrarResultado(int resultado)
+        {
+            resultadoLabel.Text = "El resultado es: \n" + resultado;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int numeroUno = int.Parse(numeroUnoTextBox.Text);
+            int numeroDos = int.Parse(numeroDosTextBox.Text);
+            
+            int resultado = suma(numeroUno, numeroDos);
+            mostrarResultado(resultado);
+        }
     }
 }

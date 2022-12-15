@@ -30,9 +30,23 @@ namespace PracticasCSharp
         {
             int numeroUno = int.Parse(numeroUnoTextBox.Text);
             int numeroDos = int.Parse(numeroDosTextBox.Text);
-            
-            int resultado = suma(numeroUno, numeroDos);
-            mostrarResultado(resultado);
+
+            //int resultado = suma(numeroUno, numeroDos);
+            //mostrarResultado(resultado);
+
+            //LOTERIA
+            //if (numeroUno == 8)  resultadoLabel.Text = "Te ha tocado";
+            //else  resultadoLabel.Text = "No te ha tocado nada";
+
+            //REPASO IF
+            //TABLA MULTIPLICAR CON NÚMERO TOPE
+            String resultado =  "TABLA DE MULTIPLICAR";
+            for(int i=1; i<= numeroDos; i++)
+            {
+                int resultadoMultiplicacion = i * numeroUno;
+                resultado += "\n" + numeroUno + " x " + i + " = " + resultadoMultiplicacion;                
+            }
+            resultadoLabel.Text = resultado;
         }
     }
 }
